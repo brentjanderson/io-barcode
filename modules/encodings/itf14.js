@@ -22,7 +22,8 @@ class ITF14 extends ITF {
     for (let i = 0; i < 13; i++) {
       result += Number(this.code[i]) * (3 - (i % 2) * 2)
     }
-
+    
+    return Math.ceil(result / 10) * 10 - result;
     return 10 - (result % 10)
   }
 }
